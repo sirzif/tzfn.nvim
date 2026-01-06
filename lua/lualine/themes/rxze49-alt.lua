@@ -1,28 +1,28 @@
 local p = require("rxze49.palette")
 local config = require("rxze49.config")
 
-local bg_base = p.base
+local bg_base = p.bg
 if config.options.styles.transparency then
 	bg_base = "NONE"
 end
 
 return {
 	normal = {
-		a = { bg = p.surface, fg = p.rose, gui = "bold" },
-		b = { bg = p.surface, fg = p.text },
+		a = { bg = p.surface, fg = p.mgt, gui = "bold" },
+		b = { bg = p.surface, fg = p.fg },
 		c = { bg = p.surface, fg = p.subtle, gui = "italic" },
 	},
 	insert = {
-		a = { bg = p.surface, fg = p.foam, gui = "bold" },
+		a = { bg = p.surface, fg = p.blu, gui = "bold" },
 	},
 	visual = {
-		a = { bg = p.surface, fg = p.iris, gui = "bold" },
+		a = { bg = p.surface, fg = p.blu_b, gui = "bold" },
 	},
 	replace = {
-		a = { bg = p.surface, fg = p.pine, gui = "bold" },
+		a = { bg = p.surface, fg = p.grn, gui = "bold" },
 	},
 	command = {
-		a = { bg = p.surface, fg = p.love, gui = "bold" },
+		a = { bg = p.surface, fg = p.red, gui = "bold" },
 	},
 	inactive = {
 		a = { bg = bg_base, fg = p.subtle, gui = "bold" },

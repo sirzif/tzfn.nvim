@@ -1,6 +1,6 @@
 ---@alias Variant "main" | "faded" | "light"
----@alias Palette { base: string, surface: string, overlay: string, muted: string, subtle: string, text: string, love: string, gold: string, rose: string, pine: string, foam: string, iris: string }
----@alias PaletteColor "base" | "surface" | "overlay" | "muted" | "subtle" | "text" | "love" | "gold" | "rose" | "pine" | "foam" | "iris" | "highlight_low" | "highlight_med" | "highlight_high"
+---@alias Palette { bg: string, surface: string, overlay: string, muted: string, subtle: string, fg: string, red: string, ylw: string, mgt: string, grn: string, blu: string, blu_b: string, grn_b: string}
+---@alias PaletteColor "bg" | "surface" | "overlay" | "muted" | "subtle" | "fg" | "red" | "ylw" | "mgt" | "grn" | "blu" | "blu_b" | "grn_b" | "hl_low" | "hl_med" | "hl_high"
 ---@alias Highlight { link: string, inherit: boolean } | { fg: string, bg: string, sp: string, bold: boolean, italic: boolean, undercurl: boolean, underline: boolean, underdouble: boolean, underdotted: boolean, underdashed: boolean, strikethrough: boolean, inherit: boolean }
 
 local config = {}
@@ -24,13 +24,12 @@ config.options = {
 	extend_background_behind_borders = true,
 
 	enable = {
-		legacy_highlights = true,
 		terminal = true,
 	},
 
 	styles = {
-		bold = true,
-		italic = true,
+		bold = false,
+		italic = false,
 		transparency = false,
 	},
 
@@ -39,36 +38,36 @@ config.options = {
 
 	---@type table<string, string | PaletteColor>
 	groups = {
-		border = "muted",
-		link = "iris",
+		border = "red",
+		link = "fg",
 		panel = "surface",
 
-		error = "love",
-		hint = "iris",
-		info = "foam",
-		ok = "leaf",
-		warn = "gold",
-		note = "pine",
-		todo = "rose",
+		error = "red",
+		hint = "blu_b",
+		info = "blu",
+		ok = "grn_b",
+		warn = "ylw",
+		note = "grn",
+		todo = "mgt",
 
-		git_add = "foam",
-		git_change = "rose",
-		git_delete = "love",
-		git_dirty = "rose",
+		git_add = "grn",
+		git_change = "mgt",
+		git_delete = "red",
+		git_dirty = "mgt",
 		git_ignore = "muted",
-		git_merge = "iris",
-		git_rename = "pine",
-		git_stage = "iris",
-		git_text = "rose",
+		git_merge = "grn_b",
+		git_rename = "grn",
+		git_stage = "grn_b",
+		git_text = "mgt",
 		git_untracked = "subtle",
 
 		---@type string | PaletteColor
-		h1 = "iris",
-		h2 = "foam",
-		h3 = "rose",
-		h4 = "gold",
-		h5 = "pine",
-		h6 = "leaf",
+		h1 = "blu_b",
+		h2 = "blu",
+		h3 = "mgt",
+		h4 = "ylw",
+		h5 = "grn",
+		h6 = "grn_b",
 	},
 
 	---@type table<string, Highlight>
@@ -80,17 +79,6 @@ config.options = {
 	---@param palette Palette
 	---@diagnostic disable-next-line: unused-local
 	before_highlight = function(group, highlight, palette) end,
-
-	---@deprecated Replaced by `options.dim_inactive_windows`
-	-- dim_nc_background = false,
-	---@deprecated Replaced by `options.enable.transparency`
-	-- disable_background = false,
-	---@deprecated Replaced by `options.highlight_groups["NormalFloat"]`
-	-- disable_float_background = false,
-	---@deprecated Replaced by `options.styles.italic`
-	-- disable_italics = false,
-	---@deprecated Replaced by `options.highlight_groups`
-	-- bold_vert_split = false
 }
 
 ---@param options Options | nil

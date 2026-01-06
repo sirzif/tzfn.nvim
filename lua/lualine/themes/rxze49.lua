@@ -8,29 +8,29 @@ end
 
 return {
 	normal = {
-		a = { bg = p.rose, fg = p.base, gui = "bold" },
-		b = { bg = p.overlay, fg = p.rose },
-		c = { bg = bg_base, fg = p.text },
+		a = { bg = p.mgt, fg = p.bg, gui = "bold" },
+		b = { bg = p.overlay, fg = p.mgt },
+		c = { bg = bg_base, fg = p.fg },
 	},
 	insert = {
-		a = { bg = p.foam, fg = p.base, gui = "bold" },
-		b = { bg = p.overlay, fg = p.foam },
-		c = { bg = bg_base, fg = p.text },
+		a = { bg = p.blu, fg = p.bg, gui = "bold" },
+		b = { bg = p.overlay, fg = p.blu },
+		c = { bg = bg_base, fg = p.fg },
 	},
 	visual = {
-		a = { bg = p.iris, fg = p.base, gui = "bold" },
-		b = { bg = p.overlay, fg = p.iris },
-		c = { bg = bg_base, fg = p.text },
+		a = { bg = p.blu_b, fg = p.bg, gui = "bold" },
+		b = { bg = p.overlay, fg = p.blu_b },
+		c = { bg = bg_base, fg = p.fg },
 	},
 	replace = {
-		a = { bg = p.pine, fg = p.base, gui = "bold" },
-		b = { bg = p.overlay, fg = p.pine },
-		c = { bg = bg_base, fg = p.text },
+		a = { bg = p.grn, fg = p.bg, gui = "bold" },
+		b = { bg = p.overlay, fg = p.grn },
+		c = { bg = bg_base, fg = p.fg },
 	},
 	command = {
-		a = { bg = p.love, fg = p.base, gui = "bold" },
-		b = { bg = p.overlay, fg = p.love },
-		c = { bg = bg_base, fg = p.text },
+		a = { bg = p.red, fg = p.bg, gui = "bold" },
+		b = { bg = p.overlay, fg = p.red },
+		c = { bg = bg_base, fg = p.fg },
 	},
 	inactive = {
 		a = { bg = bg_base, fg = p.muted, gui = "bold" },

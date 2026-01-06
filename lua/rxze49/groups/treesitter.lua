@@ -1,73 +1,75 @@
+local util = require("rxze49.util")
+
 return function(palette, styles, groups)
 	return {
 		--- Treesitter
 		--- |:help treesitter-highlight-groups|
-		["@variable"] = { fg = palette.text, italic = styles.italic },
-		["@variable.builtin"] = { fg = palette.love, italic = styles.italic, bold = styles.bold },
-		["@variable.parameter"] = { fg = palette.text, italic = styles.italic },
-		["@variable.parameter.builtin"] = { fg = palette.love, italic = styles.italic, bold = styles.bold },
-		["@variable.member"] = { fg = palette.text },
+		["@variable"] = { fg = palette.fg, italic = styles.italic },
+		["@variable.builtin"] = { fg = palette.red, italic = styles.italic, bold = styles.bold },
+		["@variable.parameter"] = { fg = palette.fg, italic = styles.italic },
+		["@variable.parameter.builtin"] = { fg = palette.red, italic = styles.italic, bold = styles.bold },
+		["@variable.member"] = { fg = palette.fg },
 
-		["@constant"] = { fg = palette.gold },
-		["@constant.builtin"] = { fg = palette.gold, bold = styles.bold },
-		["@constant.macro"] = { fg = palette.love },
+		["@constant"] = { fg = palette.ylw },
+		["@constant.builtin"] = { fg = palette.ylw, bold = styles.bold },
+		["@constant.macro"] = { fg = palette.ylw },
 
-		["@module"] = { fg = palette.text },
-		["@module.builtin"] = { fg = palette.text, bold = styles.bold },
+		["@module"] = { fg = palette.grn_b },
+		["@module.builtin"] = { fg = palette.red, bold = styles.bold },
 		["@label"] = { link = "Label" },
 
 		["@string"] = { link = "String" },
 		-- ["@string.documentation"] = {},
-		["@string.regexp"] = { fg = palette.rose },
-		["@string.escape"] = { fg = palette.rose },
-		["@string.special"] = { fg = palette.rose },
-		["@string.special.symbol"] = { fg = palette.rose },
-		["@string.special.url"] = { fg = palette.rose, underline = true },
+		["@string.regexp"] = { fg = palette.mgt },
+		["@string.escape"] = { fg = palette.ylw },
+		["@string.special"] = { fg = palette.blu_b },
+		["@string.special.symbol"] = { fg = palette.fg },
+		["@string.special.url"] = { fg = palette.fg, underline = true },
 		-- ["@string.special.path"] = {},
 
 		["@character"] = { link = "Character" },
-		["@character.special"] = { fg = palette.rose },
+		["@character.special"] = { link = "Character" },
 
 		["@boolean"] = { link = "Boolean" },
 		["@number"] = { link = "Number" },
 		["@number.float"] = { link = "Number" },
 		["@float"] = { link = "Number" },
 
-		["@type"] = { fg = palette.foam },
-		["@type.builtin"] = { fg = palette.iris, bold = styles.bold },
+		["@type"] = { fg = palette.blu },
+		["@type.builtin"] = { fg = palette.blu_d, bold = styles.bold },
 		-- ["@type.definition"] = {},
 
-		["@attribute"] = { fg = palette.iris },
-		["@attribute.builtin"] = { fg = palette.iris, bold = styles.bold },
-		["@property"] = { fg = palette.text, italic = styles.italic },
+		["@attribute"] = { fg = palette.blu_b },
+		["@attribute.builtin"] = { fg = palette.blu_b, bold = styles.bold },
+		["@property"] = { fg = palette.fg, italic = styles.italic },
 
-		["@function"] = { fg = palette.rose },
-		["@function.builtin"] = { fg = palette.rose, bold = styles.bold },
+		["@function"] = { fg = palette.mgt },
+		["@function.builtin"] = { fg = palette.mgt, bold = styles.bold },
 		-- ["@function.call"] = {},
 		["@function.macro"] = { link = "Function" },
 
-		["@function.method"] = { fg = palette.rose },
-		["@function.method.call"] = { fg = palette.rose },
+		["@function.method"] = { fg = palette.mgt },
+		["@function.method.call"] = { fg = palette.mgt },
 
-		["@constructor"] = { fg = palette.foam },
+		["@constructor"] = { fg = palette.blu },
 		["@operator"] = { link = "Operator" },
 
-		["@keyword"] = { fg = palette.love },
+		["@keyword"] = { link = "Keyword" },
 		-- ["@keyword.coroutine"] = {},
 		-- ["@keyword.function"] = {},
 		["@keyword.operator"] = { fg = palette.subtle },
-		["@keyword.import"] = { fg = palette.love },
-		["@keyword.storage"] = { fg = palette.love },
-		["@keyword.repeat"] = { fg = palette.love },
-		["@keyword.return"] = { fg = palette.love },
-		["@keyword.debug"] = { fg = palette.gold },
-		["@keyword.exception"] = { fg = palette.love },
+		["@keyword.import"] = { fg = palette.red },
+		["@keyword.storage"] = { fg = palette.red },
+		["@keyword.repeat"] = { fg = palette.red },
+		["@keyword.return"] = { fg = palette.red },
+		["@keyword.debug"] = { fg = palette.ylw },
+		["@keyword.exception"] = { fg = palette.red },
 
-		["@keyword.conditional"] = { fg = palette.love },
-		["@keyword.conditional.ternary"] = { fg = palette.love },
+		["@keyword.conditional"] = { fg = palette.red },
+		["@keyword.conditional.ternary"] = { fg = palette.red },
 
-		["@keyword.directive"] = { fg = palette.love },
-		["@keyword.directive.define"] = { fg = palette.love },
+		["@keyword.directive"] = { fg = palette.mgt },
+		["@keyword.directive.define"] = { fg = palette.mgt },
 
 		--- Punctuation
 		["@punctuation.delimiter"] = { fg = palette.subtle },
@@ -91,25 +93,25 @@ return function(palette, styles, groups)
 		["@markup.strikethrough"] = { strikethrough = true },
 		["@markup.underline"] = { underline = true },
 
-		["@markup.heading"] = { fg = palette.foam, bold = styles.bold },
+		["@markup.heading"] = { fg = palette.blu, bold = styles.bold },
 
-		["@markup.quote"] = { fg = palette.text },
+		["@markup.quote"] = { fg = palette.fg },
 		["@markup.math"] = { link = "Special" },
 		["@markup.environment"] = { link = "Macro" },
 		["@markup.environment.name"] = { link = "@type" },
 
 		-- ["@markup.link"] = {},
 		["@markup.link.markdown_inline"] = { fg = palette.subtle },
-		["@markup.link.label.markdown_inline"] = { fg = palette.foam },
+		["@markup.link.label.markdown_inline"] = { fg = palette.blu },
 		["@markup.link.url"] = { fg = groups.link },
 
 		-- ["@markup.raw"] = { bg = palette.surface },
 		-- ["@markup.raw.block"] = { bg = palette.surface },
 		["@markup.raw.delimiter.markdown"] = { fg = palette.subtle },
 
-		["@markup.list"] = { fg = palette.love },
-		["@markup.list.checked"] = { fg = palette.foam, bg = palette.foam, blend = 10 },
-		["@markup.list.unchecked"] = { fg = palette.text },
+		["@markup.list"] = { fg = palette.grn },
+		["@markup.list.checked"] = { fg = palette.blu, bg = palette.blu, blend = 10 },
+		["@markup.list.unchecked"] = { fg = palette.fg },
 
 		-- Markdown headings
 		["@markup.heading.1.markdown"] = { link = "markdownH1" },
@@ -130,8 +132,8 @@ return function(palette, styles, groups)
 		["@diff.delta"] = { bg = groups.git_change, blend = 20 },
 
 		["@tag"] = { link = "Tag" },
-		["@tag.attribute"] = { fg = palette.iris },
-		["@tag.delimiter"] = { fg = palette.subtle },
+		["@tag.attribute"] = { fg = palette.fg },
+		["@tag.delimiter"] = { fg = palette.fg },
 
 		--- Non-highlighting captures
 		-- ["@none"] = {},
@@ -140,25 +142,5 @@ return function(palette, styles, groups)
 
 		-- ["@spell"] = {},
 		-- ["@nospell"] = {},
-
-		--- Semantic
-		["@lsp.type.comment"] = {},
-		["@lsp.type.comment.c"] = { link = "@comment" },
-		["@lsp.type.comment.cpp"] = { link = "@comment" },
-		["@lsp.type.enum"] = { link = "@type" },
-		["@lsp.type.interface"] = { link = "@interface" },
-		["@lsp.type.keyword"] = { link = "@keyword" },
-		["@lsp.type.namespace"] = { link = "@namespace" },
-		["@lsp.type.namespace.python"] = { link = "@variable" },
-		["@lsp.type.parameter"] = { link = "@parameter" },
-		["@lsp.type.property"] = { link = "@property" },
-		["@lsp.type.variable"] = {}, -- defer to treesitter for regular variables
-		["@lsp.type.variable.svelte"] = { link = "@variable" },
-		["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
-		["@lsp.typemod.operator.injected"] = { link = "@operator" },
-		["@lsp.typemod.string.injected"] = { link = "@string" },
-		["@lsp.typemod.variable.constant"] = { link = "@constant" },
-		["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
-		["@lsp.typemod.variable.injected"] = { link = "@variable" },
 	}
 end
