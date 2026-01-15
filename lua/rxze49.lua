@@ -481,7 +481,7 @@ local function set_highlights()
 		DiagnosticVirtualTextOk = { fg = groups.ok },
 		DiagnosticVirtualTextWarn = { fg = groups.warn },
 
-		FloatBorder = { fg = palette.grn_b, bg = "NONE" },
+		FloatBorder = { fg = groups.border, bg = "NONE" },
 		FloatTitle = { fg = palette.grn_b, bg = "NONE", bold = styles.bold },
 		Folded = { fg = palette.fg, bg = "NONE" },
 		NormalFloat = { bg = "NONE" },
@@ -629,7 +629,7 @@ function M.colorscheme(variant)
 
 	if variant == "light" then
 		vim.o.background = "light"
-	elseif variant == "main" or variant == "faded" then
+	elseif variant == "main" then
 		vim.o.background = "dark"
 	end
 
