@@ -9,7 +9,7 @@ return function(palette, styles, groups)
 		["@variable.member"] = { fg = palette.fg },
 
 		["@constant"] = { link = "Constant" },
-		["@constant.builtin"] = { fg = palette.grn_b, bold = styles.bold },
+		["@constant.builtin"] = { fg = palette.mgt, bold = styles.bold },
 		["@constant.macro"] = { fg = palette.grn_b },
 
 		["@module"] = { fg = palette.blu_b },
@@ -18,15 +18,15 @@ return function(palette, styles, groups)
 
 		["@string"] = { link = "String" },
 		["@string.documentation"] = { fg = palette.ylw_d },
-		["@string.regexp"] = { fg = palette.blu_b },
+		["@string.regexp"] = { fg = palette.red },
 		["@string.escape"] = { fg = palette.red },
-		["@string.special"] = { fg = palette.ylw_b },
+		["@string.special"] = { fg = palette.mgt },
 		["@string.special.symbol"] = { link = "@constant" },
-		["@string.special.url"] = { fg = palette.blu_b, underline = true },
-		["@string.special.path"] = { fg = palette.blu },
+		["@string.special.url"] = { fg = palette.fg, underline = true },
+		["@string.special.path"] = { fg = palette.mgt },
 
 		["@character"] = { link = "Character" },
-		["@character.special"] = { fg = palette.red },
+		["@character.special"] = { fg = palette.mgt },
 
 		["@boolean"] = { link = "Boolean" },
 		["@number"] = { link = "Number" },
@@ -87,12 +87,12 @@ return function(palette, styles, groups)
 		["@comment.note"] = { fg = groups.note, bg = groups.note, blend = 15 },
 
 		--- Markup
-		["@markup.strong"] = { bold = styles.bold },
-		["@markup.italic"] = { italic = styles.italic },
+		["@markup.strong"] = { bold = true },
+		["@markup.italic"] = { italic = true },
 		["@markup.strikethrough"] = { strikethrough = true },
 		["@markup.underline"] = { underline = true },
 
-		["@markup.heading"] = { fg = palette.grn, bold = styles.bold },
+		-- ["@markup.heading"] = { fg = palette.grn, bold = styles.bold },
 
 		["@markup.quote"] = { fg = palette.fg },
 		["@markup.math"] = { fg = palette.blu_b },
@@ -100,7 +100,8 @@ return function(palette, styles, groups)
 		["@markup.environment.name"] = { link = "@type" },
 
 		["@markup.link"] = { fg = palette.fg, underline = true },
-		["@markup.link.label"] = { fg = palette.muted },
+		["@markup.link.markdown_inline"] = { fg = palette.fg, underline = false },
+		["@markup.link.label"] = { fg = palette.grn_b },
 		["@markup.link.url"] = { fg = groups.link, underline = true },
 
 		["@markup.raw"] = { fg = palette.ylw },
@@ -111,18 +112,14 @@ return function(palette, styles, groups)
 		["@markup.list.unchecked"] = { fg = palette.subtle },
 
 		-- Markdown headings
-		["@markup.heading.1.markdown"] = { link = "markdownH1" },
-		["@markup.heading.2.markdown"] = { link = "markdownH2" },
-		["@markup.heading.3.markdown"] = { link = "markdownH3" },
-		["@markup.heading.4.markdown"] = { link = "markdownH4" },
-		["@markup.heading.5.markdown"] = { link = "markdownH5" },
-		["@markup.heading.6.markdown"] = { link = "markdownH6" },
-		["@markup.heading.1.marker.markdown"] = { link = "markdownH1Delimiter" },
-		["@markup.heading.2.marker.markdown"] = { link = "markdownH2Delimiter" },
-		["@markup.heading.3.marker.markdown"] = { link = "markdownH3Delimiter" },
-		["@markup.heading.4.marker.markdown"] = { link = "markdownH4Delimiter" },
-		["@markup.heading.5.marker.markdown"] = { link = "markdownH5Delimiter" },
-		["@markup.heading.6.marker.markdown"] = { link = "markdownH6Delimiter" },
+
+		["@markup.heading"] = { link = "Title" },
+		["@markup.heading.1"] = { fg = groups.h1, bold = true },
+		["@markup.heading.2"] = { fg = groups.h2, bold = true },
+		["@markup.heading.3"] = { fg = groups.h3, bold = true },
+		["@markup.heading.4"] = { fg = groups.h4, bold = true },
+		["@markup.heading.5"] = { fg = groups.h5, bold = true },
+		["@markup.heading.6"] = { fg = groups.h6, bold = true },
 
 		["@diff.plus"] = { fg = groups.git_add, bg = groups.git_add, blend = 20 },
 		["@diff.minus"] = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },

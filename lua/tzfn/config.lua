@@ -64,10 +64,10 @@ config.options = {
 		---@type string | PaletteColor
 		h1 = "blu_b",
 		h2 = "blu",
-		h3 = "mgt",
-		h4 = "ylw",
-		h5 = "grn",
-		h6 = "grn_b",
+		h3 = "grn",
+		h4 = "grn_b",
+		h5 = "ylw",
+		h6 = "mgt",
 	},
 
 	---@type table<string, Highlight>
