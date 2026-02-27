@@ -131,7 +131,7 @@ return function(palette, groups, styles, config, make_border)
 		LspReferenceWrite = { bg = util.blend(palette.hl2, palette.overlay, 0.3) },
 		Macro = { fg = palette.mgt2 },
 		Number = { fg = util.blend(palette.ylw2, palette.ylw, 0.2) },
-		Operator = { fg = util.blend(palette.fg, palette.mgt2, 0.3) },
+		Operator = { fg = util.blend(palette.subtle, palette.blu2, 0.7) },
 		PreCondit = { fg = palette.mgt2 },
 		PreProc = { link = "PreCondit" },
 		Repeat = { fg = palette.blu },
