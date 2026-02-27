@@ -29,7 +29,7 @@ config.options = {
 
 	styles = {
 		bold = false,
-		italic = false,
+		italic = true,
 		transparency = false,
 	},
 
