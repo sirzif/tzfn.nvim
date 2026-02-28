@@ -9,7 +9,7 @@
 
 ### Main
 
-![smth](./images/main.png)
+![smth](./assets/main.png)
 
 ## Install
 
@@ -17,7 +17,7 @@
 
 ```lua
 {
-    "martynasmuizys/tzfn.nvim",
+    "sirzif/tzfn.nvim",
     name = "tzfn"
     config = function()
         require("tzfn").setup({
