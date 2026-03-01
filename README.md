@@ -9,7 +9,11 @@
 
 ### Main
 
-![smth](./assets/main.png)
+![main](./assets/main.png)
+
+### Light
+
+![light](./assets/light.png)
 
 ## Install
 
