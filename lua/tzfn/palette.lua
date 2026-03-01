@@ -38,15 +38,16 @@ local variants = {
 		none = "NONE",
 	},
 	light = {
-		-- TODO. need elp
-		_nc = "#141216",
-		bg = "#201822",
-		surface = "#2c232e",
-		overlay = "#3d3340",
+		-- idk anything about light themes
+		-- need elp with this perhaps idk
+		_nc = "#e6e3e8",
+		bg = "#f8f2fa",
+		surface = "#d4cbd6",
+		overlay = "#c4b1c9",
 
-		fg = "#d6d9e0",
-		muted = "#646266",
-		subtle = "#969399",
+		fg = "#26242b",
+		muted = "#a6a4ab",
+		subtle = "#716f75",
 
 		red = "#f84a12",
 		grn = "#36994e",
@@ -69,9 +70,9 @@ local variants = {
 
 		err = "#d93b55",
 
-		hl1 = "#291f2b",
-		hl2 = "#372a3b",
-		hl3 = "#45324a",
+		hl1 = "#f1e4f5",
+		hl2 = "#ddc5e3",
+		hl3 = "#c499cf",
 
 		none = "NONE",
 	},
