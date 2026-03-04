@@ -7,7 +7,7 @@ local variants = {
 		overlay = "#303e45",
 
 		fg = "#d6d9e0",
-		muted = "#646266",
+		muted = "#494b4d",
 		subtle = "#969399",
 
 		red = "#f84a12",

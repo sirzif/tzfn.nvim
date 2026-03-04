@@ -51,8 +51,6 @@ local function set_highlights()
 		PmenuExtra = { fg = palette.fg, bg = "NONE" },
 		PmenuKind = { fg = palette.blu, bg = "NONE" },
 		SignColumn = { fg = palette.fg, bg = "NONE" },
-		StatusLine = { fg = palette.subtle, bg = "NONE" },
-		StatusLineNC = { fg = palette.muted, bg = "NONE" },
 		TabLine = { bg = "NONE", fg = palette.subtle },
 		TabLineFill = { bg = "NONE" },
 		TabLineSel = { fg = palette.fg, bg = "NONE", bold = styles.bold },

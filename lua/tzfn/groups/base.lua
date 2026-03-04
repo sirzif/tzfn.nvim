@@ -57,7 +57,7 @@ return function(palette, styles, groups, config, make_border)
 		SpellCap = { sp = palette.subtle, undercurl = true },
 		SpellLocal = { sp = palette.subtle, undercurl = true },
 		SpellRare = { sp = palette.subtle, undercurl = true },
-		StatusLine = { fg = palette.subtle, bg = groups.panel },
+		StatusLine = { fg = palette.subtle, bg = groups.panel, blend = 60 },
 		StatusLineNC = { fg = palette.muted, bg = groups.panel, blend = 60 },
 		StatusLineTerm = { fg = palette.bg, bg = palette.grn },
 		StatusLineTermNC = { fg = palette.bg, bg = palette.grn, blend = 60 },
@@ -72,7 +72,7 @@ return function(palette, styles, groups, config, make_border)
 		WarningMsg = { fg = groups.warn, bold = styles.bold },
 		-- Whitespace = {},
 		WildMenu = { link = "IncSearch" },
-		WinBar = { fg = palette.subtle, bg = groups.panel },
+		WinBar = { fg = palette.subtle, bg = groups.panel, blend = 60 },
 		WinBarNC = { fg = palette.muted, bg = groups.panel, blend = 60 },
 		WinSeparator = { fg = groups.border },
 
